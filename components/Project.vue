@@ -1,6 +1,9 @@
 <template>
 	<div class="p-4 bg-black flex flex-col items-start rounded-lg">
-		<NuxtLink :to="project._path" v-if="project.video || project.image">
+		<NuxtLink
+			v-if="project.video || project.image"
+			:to="project.url || project._path"
+			:target="project.url ? '_blank' : '_self'">
 			<video
 				v-if="project.video"
 				class="rounded w-full h-auto quiet"
@@ -27,7 +30,15 @@
 		<p v-if="project.description" class="text-sm line-clamp-2 mt-2">
 			{{ project.description }}
 		</p>
+		<a
+			v-if="project.url"
+			:href="project.url"
+			target="_blank"
+			class="mt-3 bg-[#dde0de] inline-block rounded transition hover:-translate-y-px px-8 py-0.5 uppercase text-sm font-bold text-black">
+			Go to app
+		</a>
 		<NuxtLink
+			v-else
 			:to="project._path"
 			class="mt-3 bg-[#dde0de] inline-block rounded transition hover:-translate-y-px px-8 py-0.5 uppercase text-sm font-bold text-black">
 			Show details

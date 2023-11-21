@@ -44,7 +44,7 @@
 <style>
 	.prose {
 		p {
-			@apply font-serif text-md mb-8;
+			@apply font-serif text-md mt-8;
 			em,
 			strong {
 				@apply italic;
@@ -53,8 +53,16 @@
 				@apply underline decoration-red;
 			}
 		}
+		ul {
+			@apply font-serif text-md mt-4 leading-tight list-disc list-inside;
+			li {
+			}
+		}
 		img {
-			@apply bg-current rounded-lg mb-8 mt-8;
+			@apply rounded-lg;
+		}
+		> img {
+			@apply bg-current mb-8 mt-8;
 		}
 	}
 </style>

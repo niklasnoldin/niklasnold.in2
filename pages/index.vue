@@ -1,16 +1,6 @@
 <template>
 	<TransitionGroup name="list">
-		<Logo key="logo" />
-		<div key="time" class="bg-white bg-opacity-10 rounded-lg p-4">
-			<div
-				class="bg-primary shadow-lg bg-gradient-to-t from-primary to-primary-muted p-8 rounded border-t border-b-4 border-t-white border-b-black aspect-square">
-				<Clock />
-			</div>
-			<p class="grow font-serif text-md leading-tight mt-3">
-				Just in case you need the time.
-			</p>
-		</div>
-		<Project v-for="project in latest" :key="project._id" :project="project" />
+		<Logo key="logo" class="sm:col-span-2 p-4" />
 		<p
 			key="description"
 			class="text-md font-serif py-4 px-6 bg-black rounded-lg">
@@ -25,6 +15,17 @@
 				class="rounded-lg w-full h-full object-cover inset-0 absolute"
 				src="/dani.jpg" />
 		</div>
+		<div key="time" class="bg-white bg-opacity-10 rounded-lg p-4">
+			<div
+				class="bg-primary shadow-lg bg-gradient-to-t from-primary to-primary-muted p-8 rounded border-t border-b-4 border-t-white border-b-black aspect-square">
+				<Clock />
+			</div>
+			<p class="grow font-serif text-md leading-tight mt-3">
+				Just in case you need the time.
+			</p>
+			<p class="mt-2 text-sm">It's also a stop watch. Try it out!</p>
+		</div>
+		<Project v-for="project in latest" :key="project._id" :project="project" />
 		<MyMap key="map" />
 		<Project v-for="project in rest" :key="project._id" :project="project" />
 		<div key="social" class="flex flex-col bg-black rounded-lg p-4 gap-4">

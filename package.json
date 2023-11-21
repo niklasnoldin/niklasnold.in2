@@ -16,6 +16,7 @@
     "@fontsource-variable/dm-sans": "^5.0.3",
     "@fontsource/dm-serif-display": "^5.0.17",
     "@vueuse/nuxt": "^10.5.0",
-    "mapbox-gl": "^2.15.0"
+    "mapbox-gl": "^2.15.0",
+    "swiper": "^9.4.0"
   }
 }
