@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "@nuxt/content": "^2.8.5",
+    "@nuxtjs/tailwindcss": "^6.8.1",
+    "nuxt": "^3.8.0"
+  },
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "^5.0.3",
+    "@fontsource/dm-serif-display": "^5.0.17",
+    "@vueuse/nuxt": "^10.5.0",
+    "mapbox-gl": "^2.15.0"
+  }
+}
