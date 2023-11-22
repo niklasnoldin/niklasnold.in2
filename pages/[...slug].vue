@@ -34,7 +34,7 @@
 						stroke-linejoin="round"
 						stroke-linecap="round" />
 				</svg>
-				Back to index</NuxtLink
+				Take me home</NuxtLink
 			>
 		</div>
 		<ContentRenderer :value="doc" class="prose col-span-2" />
@@ -53,15 +53,27 @@
 				@apply underline decoration-red;
 			}
 		}
+		p:first-child {
+			@apply mt-0;
+		}
+		h2 {
+			@apply font-serif text-lg mt-8;
+			a {
+				@apply underline decoration-red;
+			}
+		}
 		ul {
-			@apply font-serif text-md mt-4 leading-tight list-disc list-inside;
+			@apply font-serif grid text-md mt-4 leading-tight list-disc list-inside;
 			li {
 			}
 		}
-		img {
-			@apply rounded-lg;
+		@screen sm {
+			ul {
+				@apply grid-cols-2;
+			}
 		}
-		> img {
+
+		> p > img {
 			@apply bg-current mb-8 mt-8;
 		}
 	}

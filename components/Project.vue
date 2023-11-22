@@ -27,7 +27,7 @@
 		<p v-if="project.title" class="grow font-serif text-md leading-tight mt-3">
 			{{ project.title }}
 		</p>
-		<p v-if="project.description" class="text-sm line-clamp-2 mt-2">
+		<p v-if="project.description" class="text-sm mt-2">
 			{{ project.description }}
 		</p>
 		<a

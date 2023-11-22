@@ -6,5 +6,10 @@ export default defineNuxtConfig({
     compilerOptions:{
       isCustomElement: (name)=>(['swiper-container', 'swiper-slide'].includes(name))
     }
+  },
+  content:{
+    markdown:{
+      anchorLinks: false
+    }
   }
 })

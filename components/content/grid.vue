@@ -1,13 +1,17 @@
 <template>
 	<div
 		class="md-grid-wrapper mt-8"
-		:class="size === 'small' ? 'grid-cols-4' : 'grid-cols-2'">
+		:class="{
+			'grid-cols-6': size === 'tiny',
+			'grid-cols-4': size === 'small',
+			'grid-cols-2': size === 'large',
+		}">
 		<ContentSlot unwrap="p" />
 	</div>
 </template>
 <script setup>
 	defineProps({
-		size: String,
+		size: { type: String, default: "large" },
 	});
 </script>
 <style>
