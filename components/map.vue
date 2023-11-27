@@ -1,5 +1,7 @@
 <template>
-	<div id="map" class="shadow-lg rounded-lg w-full h-full quiet"></div>
+	<div
+		id="map"
+		class="shadow-lg rounded-lg min-h-[100vw] sm:min-h-0 w-full h-full quiet"></div>
 </template>
 
 <script setup>
@@ -14,6 +16,7 @@
 	onMounted(() => {
 		const map = new mapboxgl.Map({
 			container: "map",
+			cooperativeGestures: true,
 			style: "mapbox://styles/niklasnoldin/cloe9zr04002g01qq19dxcpn2",
 			center: [2.1658984, 41.3783425],
 			zoom: 4,

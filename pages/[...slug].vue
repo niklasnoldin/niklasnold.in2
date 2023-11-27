@@ -47,7 +47,7 @@
 	</ContentDoc>
 	<nav class="sm:col-span-2 md:col-span-3 mt-16">
 		<div
-			class="p-4 bg-offwhite bg-gradient-to-t from-[rgb(179,182,180)] to-offwhite bg-opacity-100 rounded-xl">
+			class="p-4 bg-offwhite bg-gradient-to-t from-offwhite-dark to-offwhite bg-opacity-100 rounded-xl">
 			<h2 class="text-md text-center text-black font-serif mb-8 mt-4">
 				Discover similar projects
 			</h2>

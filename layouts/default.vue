@@ -28,13 +28,16 @@
 	@screen sm {
 		.grid-layout {
 			@apply grid-cols-2;
-			--child-width: calc((100vw - 3 * theme(spacing.lg)) / 2);
 		}
 	}
 	@screen md {
 		.grid-layout {
-			@apply grid-cols-3 gap-lg p-lg;
-			--child-width: calc((100vw - 4 * theme(spacing.lg)) / 3);
+			@apply grid-cols-3;
+		}
+	}
+	@screen lg {
+		.grid-layout {
+			@apply gap-lg p-lg;
 		}
 	}
 

@@ -1,7 +1,6 @@
 <template>
 	<div class="text-left opacity-100 leading-none flex flex-col justify-between">
-		<h1
-			class="text-lg md:text-xl xl:text-2xl w-full tracking-tighter text-left font-serif">
+		<h1 class="text-2xl w-full tracking-tighter text-left font-serif">
 			n<span class="font-sans -translate-y-2 inline-block">i</span>k<span
 				class="font-sans -translate-y-2 inline-block"
 				>l</span
@@ -13,7 +12,7 @@
 				>n</span
 			>
 		</h1>
-		<p class="tracking-wider md:text-md xl:text-lg font-serif">
+		<p class="mt-32 tracking-wider text-lg font-serif">
 			I'm a<span
 				v-show="'aeiou'.includes(title[0])"
 				class="w-0 overflow-visible relative bottom-4 -rotate-6 font-comic text-base inline-block"

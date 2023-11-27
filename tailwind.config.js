@@ -28,7 +28,11 @@ export default {
 				muted: "#D3F2F2",
 			},
 			white: "white",
-			offwhite: "#dde0de",
+			offwhite: {
+				DEFAULT: "#dde0de",
+				muted: "#cacccb",
+				dark: "rgb(179,182,180)",
+			},
 			black: "#002020",
 			transparent: "transparent",
 			current: "currentcolor",
