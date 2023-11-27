@@ -99,13 +99,25 @@
 <style>
 	.prose {
 		p {
-			@apply font-serif text-md mt-8;
+			@apply font-serif text-md mt-8 max-w-5xl;
 			em,
 			strong {
 				@apply italic;
 			}
 			a {
-				@apply underline decoration-red;
+				@apply underline text-white decoration-red decoration-dotted decoration-2 underline-offset-4 transition-colors;
+				&:hover {
+					@apply text-red;
+				}
+			}
+		}
+		p:has(img, picture) {
+			@apply max-w-full;
+		}
+		blockquote {
+			@apply flex my-16;
+			p {
+				@apply text-md lg:text-lg max-w-5xl relative border-l-4 italic border-purple pl-4;
 			}
 		}
 		p:first-child {

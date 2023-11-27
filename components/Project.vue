@@ -3,7 +3,8 @@
 		<NuxtLink
 			v-if="project.video || project.image"
 			:to="project.url || project._path"
-			:target="project.url ? '_blank' : '_self'">
+			:target="project.url ? '_blank' : '_self'"
+			class="hover:opacity-75 transition-opacity">
 			<video
 				v-if="project.video"
 				class="rounded w-full h-auto quiet"
@@ -30,10 +31,10 @@
 				class="rounded overflow-hidden bg-current"
 				:img-attrs="{ class: 'rounded bg-current w-full' }" />
 		</NuxtLink>
-		<p v-if="project.title" class="grow font-serif text-md leading-tight mt-3">
+		<p v-if="project.title" class="font-serif text-md leading-tight mt-3">
 			{{ project.title }}
 		</p>
-		<p v-if="project.description" class="text-sm mt-2">
+		<p v-if="project.description" class="text-sm mt-2 grow mb-4">
 			{{ project.description }}
 		</p>
 		<a
