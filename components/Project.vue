@@ -18,11 +18,17 @@
 					:src="src"
 					:type="type" />
 			</video>
-			<img
+			<NuxtPicture
 				v-if="project.image"
+				sizes="100vw sm:50vw md:33vw"
+				placeholder
+				width="400"
+				height="400"
+				loading="lazy"
 				:src="project.image.src"
 				:alt="project.image.alt"
-				class="bg-current rounded" />
+				class="rounded overflow-hidden bg-current"
+				:img-attrs="{ class: 'rounded bg-current w-full' }" />
 		</NuxtLink>
 		<p v-if="project.title" class="grow font-serif text-md leading-tight mt-3">
 			{{ project.title }}
@@ -34,13 +40,13 @@
 			v-if="project.url"
 			:href="project.url"
 			target="_blank"
-			class="mt-3 bg-[#dde0de] inline-block rounded transition hover:-translate-y-px px-8 py-0.5 uppercase text-sm font-bold text-black">
+			class="mt-3 bg-offwhite inline-block rounded transition hover:-translate-y-px px-8 py-0.5 uppercase text-sm font-bold text-black">
 			Go to app
 		</a>
 		<NuxtLink
 			v-else
 			:to="project._path"
-			class="mt-3 bg-[#dde0de] inline-block rounded transition hover:-translate-y-px px-8 py-0.5 uppercase text-sm font-bold text-black">
+			class="mt-3 bg-offwhite inline-block rounded transition hover:-translate-y-px px-8 py-0.5 uppercase text-sm font-bold text-black">
 			Show details
 		</NuxtLink>
 	</div>

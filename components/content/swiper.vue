@@ -8,7 +8,7 @@
 		<ContentSlot unwrap="p" />
 		<div slot="container-end" class="flex items-center justify-between py-4">
 			<button
-				class="bg-[#dde0de] text-black text-sm uppercase font-bold rounded-lg px-8 py-1 inline-flex gap-2 items-center justify-center"
+				class="bg-offwhite text-black text-sm uppercase font-bold rounded-lg px-8 py-1 inline-flex gap-2 items-center justify-center"
 				@click="() => swiperEl.swiper.slidePrev()">
 				<svg
 					width="1.5em"
@@ -26,7 +26,7 @@
 				previous <span class="sr-only sm:not-sr-only">slide</span>
 			</button>
 			<button
-				class="bg-[#dde0de] text-black text-sm uppercase font-bold rounded-lg px-8 py-1 inline-flex gap-2 items-center justify-center"
+				class="bg-offwhite text-black text-sm uppercase font-bold rounded-lg px-8 py-1 inline-flex gap-2 items-center justify-center"
 				@click="() => swiperEl.swiper.slideNext()">
 				next <span class="sr-only sm:not-sr-only">slide</span>
 				<svg

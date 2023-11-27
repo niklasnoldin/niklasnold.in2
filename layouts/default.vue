@@ -1,5 +1,5 @@
 <template>
-	<div class="font-sans text-[#dde0de] text-base layout-wrapper min-h-screen">
+	<div class="font-sans text-offwhite text-base layout-wrapper min-h-screen">
 		<main class="grid-layout">
 			<slot></slot>
 		</main>
@@ -23,17 +23,11 @@
 	}
 	.grid-layout {
 		@apply grid  grid-cols-1 gap-4 p-4;
-
-		--child-width: calc(100vw - 2 * theme(spacing.lg));
-		> * {
-			/* width: var(--child-width); */
-			transition: opacity 500ms ease-in-out;
-		}
 	}
 
 	@screen sm {
 		.grid-layout {
-			@apply grid-cols-2 gap-lg p-lg;
+			@apply grid-cols-2;
 			--child-width: calc((100vw - 3 * theme(spacing.lg)) / 2);
 		}
 	}

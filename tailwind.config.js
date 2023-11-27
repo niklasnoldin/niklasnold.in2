@@ -5,6 +5,7 @@ export default {
 		borderRadius: {
 			DEFAULT: "1rem",
 			lg: "2rem",
+			xl: "3rem",
 			full: "99999px",
 		},
 		fontFamily: {
@@ -27,6 +28,7 @@ export default {
 				muted: "#D3F2F2",
 			},
 			white: "white",
+			offwhite: "#dde0de",
 			black: "#002020",
 			transparent: "transparent",
 			current: "currentcolor",

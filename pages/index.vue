@@ -1,20 +1,41 @@
 <template>
 	<TransitionGroup name="list">
 		<Logo key="logo" class="sm:col-span-2 p-4" />
-		<p
-			key="description"
-			class="text-md font-serif py-4 px-6 bg-black rounded-lg">
-			I'm a designer and creative coder from the 🏔️ Austrian alps. I live in 🏝️
-			Barcelona, Spain and I'm available to work. Following my 🎓 education in
-			both design and IT, I spent many years developing web apps on a 🌍 global
-			scale. Now, I aim to apply my 🧠 know-how in both fields 👩‍🎨 creatively.
-		</p>
-		<div class="md:col-span-2 relative" key="image">
-			<img
-				key="image"
-				class="rounded-lg w-full h-full object-cover inset-0 absolute"
-				src="/dani.jpg" />
+		<div key="description">
+			<p class="text-md mb-4 font-serif py-4 px-6 bg-black rounded-lg">
+				I'm a designer and creative coder from the Austrian alps 🏔️. I live in
+				Barcelona, Spain 🏝️ and I'm available to work. Following my education 🎓
+				in both design and IT, I spent many years developing web apps on a
+				global scale 🌍. Now, I aim to apply my know-how 🧠 in both fields
+				creatively 👩‍🎨.
+			</p>
+			<nav aria-label="Contact Links">
+				<ul class="rounded-lg p-4 bg-black grid grid-cols-3 gap-4">
+					<li>
+						<a
+							class="social-media hover:bg-orange transition-colors h-full text-black rounded flex items-center justify-center px-8 py-4"
+							href="https://instagram.com/nippiofficial">
+							Instagram
+						</a>
+					</li>
+					<li>
+						<a
+							class="social-media hover:bg-purple transition-colors h-full text-black rounded flex items-center justify-center px-8 py-4"
+							href="https://linkedin.com/niklasnoldin">
+							Linkedin
+						</a>
+					</li>
+					<li>
+						<a
+							class="social-media hover:bg-green transition-colors h-full text-black rounded flex items-center justify-center px-8 py-4"
+							href="mailto:info@niklasnold.in">
+							E-Mail
+						</a>
+					</li>
+				</ul>
+			</nav>
 		</div>
+		<div class="md:col-span-2 rounded-lg relative trippy" key="image"></div>
 		<div key="time" class="bg-white bg-opacity-10 rounded-lg p-4">
 			<div
 				class="bg-primary shadow-lg bg-gradient-to-t from-primary to-primary-muted p-8 rounded border-t border-b-4 border-t-white border-b-black aspect-square">
@@ -28,24 +49,6 @@
 		<Project v-for="project in latest" :key="project._id" :project="project" />
 		<MyMap key="map" />
 		<Project v-for="project in rest" :key="project._id" :project="project" />
-		<div key="social" class="flex flex-col bg-black rounded-lg p-4 gap-4">
-			<a
-				class="social-media hover:bg-orange transition-colors h-full text-black rounded flex items-center justify-center px-8 py-4"
-				href="https://instagram.com/nippiofficial">
-				Instagram
-			</a>
-			<a
-				class="social-media hover:bg-purple transition-colors h-full text-black rounded flex items-center justify-center px-8 py-4"
-				href="https://linkedin.com/niklasnoldin">
-				Linkedin
-			</a>
-			<a
-				class="social-media hover:bg-green transition-colors h-full text-black rounded flex items-center justify-center px-8 py-4"
-				href="mailto:info@niklasnold.in">
-				E-Mail
-			</a>
-		</div>
-
 		<div
 			key="imprint"
 			class="flex flex-col justify-between bg-black rounded-lg py-4 px-6">
@@ -90,7 +93,7 @@
 </template>
 
 <script setup>
-	import { Map as MyMap, Logo, Clock, Filler, Cv } from "#components";
+	import { Map as MyMap, Logo, Clock } from "#components";
 
 	const { data: latest } = await useAsyncData("latestProjects", () =>
 		queryContent("projects").limit(4).find()
@@ -98,18 +101,43 @@
 	const { data: rest } = await useAsyncData("rest", () =>
 		queryContent("projects").skip(4).find()
 	);
-
-	function indexIsFillerIndex(num) {
-		// is prime number
-		for (let i = 2, s = Math.sqrt(num); i <= s; i++) {
-			if (num % i === 0) return false;
-		}
-		return num > 1;
-	}
 </script>
 
 <style>
 	.social-media {
 		@apply bg-white bg-opacity-20 text-white;
+	}
+
+	.trippy {
+		background-image: radial-gradient(
+			circle at center,
+			theme(colors.offwhite) 0,
+			theme(colors.offwhite) 10%,
+			theme(colors.transparent) calc(10% + 1px),
+			theme(colors.transparent) 20%,
+			theme(colors.offwhite) calc(20% + 1px),
+			theme(colors.offwhite) 30%,
+			theme(colors.transparent) calc(30% + 1px),
+			theme(colors.transparent) 40%,
+			theme(colors.offwhite) calc(40% + 1px),
+			theme(colors.offwhite) 50%,
+			theme(colors.transparent) calc(50% + 1px),
+			theme(colors.transparent) 60%,
+			theme(colors.offwhite) calc(60% + 1px),
+			theme(colors.offwhite) 70%,
+			theme(colors.transparent) calc(70% + 1px),
+			theme(colors.transparent) 80%,
+			theme(colors.offwhite) calc(80% + 1px),
+			theme(colors.offwhite) 90%,
+			theme(colors.transparent) calc(90% + 1px),
+			theme(colors.transparent) 100%
+		);
+		background-position: center center;
+		background-size: 100% 100%;
+
+		transition: all 2s;
+	}
+	.trippy:hover {
+		background-size: 110% 110%;
 	}
 </style>
