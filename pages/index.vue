@@ -1,4 +1,7 @@
 <template>
+	<Head>
+		<title>Niklas Noldin 🪩</title>
+	</Head>
 	<Logo key="logo" class="sm:col-span-2 md:col-span-3 lg:col-span-2 p-4" />
 	<div
 		key="description"
@@ -10,8 +13,8 @@
 			spellcheck="false">
 			Somewhere in the dark and cold abyss 🕳️ between IT 💻 and design 🎨 I try
 			to find the right approach to all projects I work on. It usually isn't
-			purely data-driven 📊 nor artistic 🖼️ but needs a symbiose 🍄 of both
-			worlds. Hit me up if that sounds good ☎️.
+			purely data-driven 📊 nor purely artistic 🖼️ but needs a symbiose 🍄 of
+			both worlds. Hit me up if that sounds good ☎️.
 		</p>
 	</div>
 	<a
