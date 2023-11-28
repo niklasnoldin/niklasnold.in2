@@ -22,7 +22,18 @@
 			height="400">
 			<source v-for="{ src, type } in doc.video" :src="src" :type="type" />
 		</video>
-		<h1 class="text-xl font-serif col-span-2 leading-tight">{{ doc.title }}</h1>
+		<div class="col-span-2 flex flex-col justify-between flex-wrap">
+			<h1 class="text-xl font-serif leading-tight">
+				{{ doc.title }}
+			</h1>
+			<p class="-m-2">
+				<span
+					v-for="tag in doc.tags"
+					class="inline-block text-sm px-8 border m-2 rounded uppercase"
+					>{{ tag }}</span
+				>
+			</p>
+		</div>
 		<div>
 			<NuxtLink to="/" class="button">
 				<svg
