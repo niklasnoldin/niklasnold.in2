@@ -4,7 +4,7 @@
 		key="description"
 		class="sm:col-span-2 lg:col-span-1 flex flex-col justify-between">
 		<p
-			class="text-md font-serif py-4 px-6 bg-black rounded-lg focus:bg-black-light focus:outline-none transition-colors"
+			class="sm:text-md font-serif py-4 px-6 bg-black rounded-lg focus:bg-black-light focus:outline-none transition-colors"
 			contenteditable
 			autocorrect="false"
 			spellcheck="false">

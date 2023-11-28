@@ -13,14 +13,16 @@
 				</button>
 			</span>
 		</h1>
-		<p class="mt-32 tracking-wider text-lg font-serif">
-			I'm a<span
-				v-show="'aeiou'.includes(title[0])"
-				class="w-0 overflow-visible relative bottom-4 -rotate-6 font-comic text-base inline-block"
-				>n</span
-			>{{ " " }}<span class="italic profession text-purple">{{ title }}</span
-			>.
-		</p>
+		<div class="mt-32 h-32 flex flex-col justify-end">
+			<p class="tracking-wider text-lg font-serif">
+				I'm a<span
+					v-show="'aeiou'.includes(title[0])"
+					class="w-0 overflow-visible relative bottom-4 -rotate-6 font-comic text-base inline-block"
+					>n</span
+				>{{ " " }}<span class="italic profession text-purple">{{ title }}</span
+				>.
+			</p>
+		</div>
 	</div>
 </template>
 
