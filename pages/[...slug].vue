@@ -24,9 +24,7 @@
 		</video>
 		<h1 class="text-xl font-serif col-span-2 leading-tight">{{ doc.title }}</h1>
 		<div>
-			<NuxtLink
-				to="/"
-				class="bg-offwhite text-black text-sm uppercase font-bold rounded-lg px-8 py-1 inline-flex gap-2 items-center justify-center">
+			<NuxtLink to="/" class="button">
 				<svg
 					width="1.5em"
 					height="1.5em"
@@ -61,9 +59,7 @@
 			</ul>
 		</div>
 		<div class="text-center my-32">
-			<NuxtLink
-				to="/"
-				class="bg-offwhite text-black text-sm uppercase font-bold rounded-lg px-8 py-1 inline-flex gap-2 items-center justify-center">
+			<NuxtLink to="/" class="button">
 				<svg
 					width="1.5em"
 					height="1.5em"
@@ -106,8 +102,12 @@
 			}
 			a {
 				@apply underline text-white decoration-red decoration-dotted decoration-2 underline-offset-4 transition-colors;
-				&:hover {
+				&:hover,
+				&:focus {
 					@apply text-red;
+				}
+				&:focus {
+					@apply outline-none;
 				}
 			}
 		}

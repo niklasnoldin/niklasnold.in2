@@ -10,5 +10,3 @@
 		color: { type: String, default: "red" },
 	});
 </script>
-
-<style lang="scss" scoped></style>

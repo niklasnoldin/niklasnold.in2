@@ -10,5 +10,3 @@
 <script setup>
 	defineProps({ href: String });
 </script>
-
-<style lang="scss" scoped></style>

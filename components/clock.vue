@@ -1,7 +1,7 @@
 <template>
 	<div class="relative quiet">
 		<button
-			class="absolute bottom-2 left-2 w-8 h-8 rounded-full bg-purple hover:scale-105 transition-transform"
+			class="absolute bottom-2 left-2 w-8 h-8 rounded-full bg-purple hover:scale-105 focus:outline-none focus-visible:outline-black transition-transform"
 			@click="toggleMode">
 			<span class="sr-only">Toggle Mode</span>
 		</button>

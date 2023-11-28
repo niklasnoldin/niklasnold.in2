@@ -17,7 +17,7 @@
 				v-show="'aeiou'.includes(title[0])"
 				class="w-0 overflow-visible relative bottom-4 -rotate-6 font-comic text-base inline-block"
 				>n</span
-			>{{ " " }}<span class="italic text-purple">{{ title }}</span
+			>{{ " " }}<span class="italic profession text-purple">{{ title }}</span
 			>.
 		</p>
 	</div>
@@ -27,17 +27,15 @@
 	const titles = [
 		"creative coder",
 		"motion designer",
+		"live VJ",
 		"graphic designer",
 		"web developer",
-		"VJ",
 		"digital artist",
 	];
 
 	let index = 0;
 	let direction = "down";
 	const PAUSE_TIME = 3500;
-	const ANIMATION_DURATION = 500;
-	// let perCharDuration = ANIMATION_DURATION / titles[index].length;
 	let perCharDuration = 50;
 
 	const title = ref(titles[index]);
@@ -66,3 +64,10 @@
 	}
 	onMounted(() => setTimeout(animate, PAUSE_TIME));
 </script>
+
+<style>
+	.profession {
+		@apply bg-gradient-to-l from-red to-purple text-transparent pr-1;
+		background-clip: text;
+	}
+</style>

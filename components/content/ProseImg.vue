@@ -10,5 +10,3 @@
 <script setup>
 	defineProps({ withBackground: Boolean });
 </script>
-
-<style lang="scss" scoped></style>
