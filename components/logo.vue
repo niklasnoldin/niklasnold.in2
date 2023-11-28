@@ -1,16 +1,17 @@
 <template>
 	<div class="text-left opacity-100 leading-none flex flex-col justify-between">
-		<h1 class="text-2xl w-full tracking-tighter text-left font-serif">
-			n<span class="font-sans -translate-y-2 inline-block">i</span>k<span
-				class="font-sans -translate-y-2 inline-block"
-				>l</span
-			>a<span class="font-sans -translate-y-2 inline-block">s</span><br />n<span
-				class="font-sans -translate-y-2 inline-block"
-				>o</span
-			>l<span class="font-sans -translate-y-2 inline-block">d</span>i<span
-				class="font-sans -translate-y-2 inline-block"
-				>n</span
-			>
+		<h1 class="text-2xl w-full text-left font-serif">
+			<span v-for="(char, idx) in name">
+				<br v-if="char.codePointAt(0) === 32" />
+				<button
+					v-else
+					focusable="false"
+					tabindex="-1"
+					:class="styles[idx]"
+					@click="styleIds[idx] = !styleIds[idx]">
+					{{ char }}
+				</button>
+			</span>
 		</h1>
 		<p class="mt-32 tracking-wider text-lg font-serif">
 			I'm a<span
@@ -24,6 +25,18 @@
 </template>
 
 <script setup>
+	const name = "niklas noldin";
+
+	const styleIds = ref(
+		Array.from(name).map(() => Boolean(Math.round(Math.random())))
+	);
+
+	const styles = computed(() => {
+		return styleIds.value.map((id) =>
+			id ? "font-serif" : "font-sans font-medium tracking-tight"
+		);
+	});
+
 	const titles = [
 		"creative coder",
 		"motion designer",
@@ -60,9 +73,9 @@
 			}
 		}
 
-		setTimeout(animate, perCharDuration);
+		setTimeout(() => requestAnimationFrame(animate), perCharDuration);
 	}
-	onMounted(() => setTimeout(animate, PAUSE_TIME));
+	onMounted(() => setTimeout(() => requestAnimationFrame(animate), PAUSE_TIME));
 </script>
 
 <style>

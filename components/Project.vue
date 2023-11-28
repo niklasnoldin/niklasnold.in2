@@ -6,7 +6,7 @@
 			:target="project.url ? '_blank' : '_self'"
 			class="group relative bg-[#808080] focus-visible:outline-purple focus:outline-none rounded transition-opacity">
 			<div
-				class="inset-0 absolute rounded pointer-events-none opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity bg-gradient-to-t from-purple to-red"></div>
+				class="inset-0 absolute rounded pointer-events-none opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity bg-gradient-to-br from-purple to-red"></div>
 			<video
 				v-if="project.video"
 				class="rounded w-full h-auto quiet mix-blend-overlay"

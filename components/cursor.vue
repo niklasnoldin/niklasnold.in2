@@ -52,7 +52,7 @@
 			radial-gradient(
 				farthest-corner at 45% 45%,
 				theme("colors.green"),
-				theme("colors.black") 65%,
+				theme("colors.black.DEFAULT") 65%,
 				theme("colors.green") 75%
 			);
 	}

@@ -33,7 +33,7 @@ export default {
 				muted: "#cacccb",
 				dark: "rgb(179,182,180)",
 			},
-			black: "#002020",
+			black: { DEFAULT: "#002020", light: "#103030" },
 			transparent: "transparent",
 			current: "currentcolor",
 			green: "#75E96B",

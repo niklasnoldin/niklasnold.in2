@@ -14,10 +14,18 @@
 		background: top left / 5px 5px
 				linear-gradient(to bottom right, #ffffff09, #0001),
 			top left / 50vw 100vh no-repeat
-				linear-gradient(-65deg, transparent 50%, theme(colors.black) 60%),
+				linear-gradient(
+					-65deg,
+					transparent 50%,
+					theme(colors.black.DEFAULT) 60%
+				),
 			top right / 50vw 100vh no-repeat
-				linear-gradient(65deg, transparent 50%, theme(colors.black) 60%),
-			radial-gradient(circle at bottom center, #022222, theme(colors.black));
+				linear-gradient(65deg, transparent 50%, theme(colors.black.DEFAULT) 60%),
+			radial-gradient(
+				circle at bottom center,
+				#022222,
+				theme(colors.black.DEFAULT)
+			);
 
 		background-attachment: scroll, fixed, fixed, fixed;
 	}
@@ -39,20 +47,5 @@
 		.grid-layout {
 			@apply gap-lg p-lg;
 		}
-	}
-
-	.list-move,
-	.list-enter-active,
-	.list-leave-active {
-		transition: all 0.5s ease;
-	}
-
-	.list-enter-from,
-	.list-leave-to {
-		opacity: 0;
-		transform: translateX(calc(-1 * var(--child-width)));
-	}
-	.list-leave-active {
-		position: absolute;
 	}
 </style>
