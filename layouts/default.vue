@@ -1,5 +1,6 @@
 <template>
-	<div class="font-sans text-offwhite text-base layout-wrapper min-h-screen">
+	<div
+		class="font-sans text-offwhite text-base layout-wrapper min-h-screen hyphens-auto">
 		<main class="grid-layout">
 			<slot></slot>
 		</main>

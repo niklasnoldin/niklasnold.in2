@@ -23,7 +23,8 @@
 			<source v-for="{ src, type } in doc.video" :src="src" :type="type" />
 		</video>
 		<div class="col-span-2 flex flex-col justify-between flex-wrap">
-			<h1 class="text-xl font-serif leading-tight">
+			<h1
+				class="text-lg break-normal hyphens-auto sm:text-xl font-serif leading-tight mb-8">
 				{{ doc.title }}
 			</h1>
 			<p class="-m-2">
