@@ -33,7 +33,10 @@ export default defineNuxtConfig({
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }
-    ]
+    ],
+		script: [
+			{src: 'https://analytics.sam-digital.com/js/script.js',  defer: true, "data-domain": "niklasnold.in"}
+		]
 		}
 	}
 });
