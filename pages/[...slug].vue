@@ -1,30 +1,32 @@
 <template>
 	<ContentDoc v-slot="{ doc }" :path="route.path">
-		<NuxtPicture
-			sizes="100vw sm:50vw md:33vw"
-			placeholder
-			v-if="doc.image"
-			preload
-			:src="doc.image.src"
-			:alt="doc.image.alt"
-			width="400"
-			height="400"
-			class="rounded-lg w-full overflow-hidden bg-current"
-			:img-attrs="{ class: 'rounded-lg w-full' }" />
-		<video
-			v-else-if="doc.video"
-			class="rounded-lg w-full"
-			autoplay
-			muted
-			loop
-			playsinline
-			width="400"
-			height="400">
-			<source v-for="{ src, type } in doc.video" :src="src" :type="type" />
-		</video>
+		<div>
+			<NuxtPicture
+				sizes="100vw sm:50vw md:33vw"
+				placeholder
+				v-if="doc.image"
+				preload
+				:src="doc.image.src"
+				:alt="doc.image.alt"
+				width="400"
+				height="400"
+				class="rounded-lg w-full overflow-hidden bg-current"
+				:img-attrs="{ class: 'rounded-lg w-full' }" />
+			<video
+				v-else-if="doc.video"
+				class="rounded-lg w-full"
+				autoplay
+				muted
+				loop
+				playsinline
+				width="400"
+				height="400">
+				<source v-for="{ src, type } in doc.video" :src="src" :type="type" />
+			</video>
+		</div>
 		<div class="col-span-2 flex flex-col justify-between flex-wrap">
 			<h1
-				class="text-lg break-normal hyphens-auto sm:text-xl font-serif leading-tight mb-8">
+				class="text-md md:text-lg lg:text-xl break-normal hyphens-auto font-serif leading-tight mb-8">
 				{{ doc.title }}
 			</h1>
 			<p class="-m-2">
@@ -107,7 +109,7 @@
 <style>
 	.prose {
 		p {
-			@apply font-serif text-md mt-8 max-w-5xl;
+			@apply font-serif text-base mt-8 max-w-5xl;
 			em,
 			strong {
 				@apply italic;
@@ -129,14 +131,14 @@
 		blockquote {
 			@apply flex my-16;
 			p {
-				@apply text-md lg:text-lg max-w-5xl relative border-l-4 italic border-purple pl-4;
+				@apply text-md max-w-5xl relative border-l-4 italic border-purple pl-4;
 			}
 		}
 		p:first-child {
 			@apply mt-0;
 		}
 		h2 {
-			@apply font-serif text-lg mt-8;
+			@apply font-serif text-md mt-8;
 			a {
 				@apply underline decoration-red;
 			}
@@ -149,6 +151,19 @@
 		@screen sm {
 			ul {
 				@apply grid-cols-2;
+			}
+			p {
+				@apply text-md;
+			}
+			h2 {
+				@apply text-lg;
+			}
+		}
+		@screen lg {
+			blockquote {
+				p {
+					@apply text-lg;
+				}
 			}
 		}
 

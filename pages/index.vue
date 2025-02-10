@@ -11,10 +11,10 @@
 			contenteditable
 			autocorrect="false"
 			spellcheck="false">
-			Somewhere in the dark and cold abyss 🕳️ between IT 💻 and design 🎨 I try
-			to find the right approach to all projects I work on. It usually isn't
-			purely data-driven 📊 nor purely artistic 🖼️ but needs a symbiose 🍄 of
-			both worlds. Hit me up if that sounds good ☎️.
+			Somewhere in the abyss 🕳️ between IT 💻 and design 🎨 I try to find the
+			right approach to all projects I work on. It usually isn't purely
+			data-driven 📊 nor purely artistic 🖼️ but needs a symbiosis 🍄 of both.
+			Hit me up if that sounds good ☎️.
 		</p>
 	</div>
 	<a
@@ -50,11 +50,13 @@
 		key="contact"
 		aria-label="Contact Links"
 		class="sm:col-span-2 lg:col-span-1 p-4 text-black rounded-lg bg-white bg-gradient-to-t from-offwhite-muted to-offwhite flex flex-col">
-		<p class="text-center font-serif mb-4 text-md">Slide into my DMs</p>
-		<ul class="font-medium grid grow gap-4">
+		<p class="text-center font-serif mb-4 text-base sm:text-md">
+			Slide into my DMs
+		</p>
+		<ul class="font-medium grid grow gap-4 text-md">
 			<li>
 				<a
-					class="hover:bg-orange focus-visible:bg-orange focus:outline-none focus-visible:outline-purple focus-visible:text-black hover:text-black bg-black text-md text-orange transition-colors h-full rounded flex items-center justify-center gap-8 px-8 py-4 shadow-lg"
+					class="hover:bg-orange focus-visible:bg-orange focus:outline-none focus-visible:outline-purple focus-visible:text-black hover:text-black bg-black text-orange transition-colors h-full rounded flex items-center justify-center gap-8 px-8 py-4 shadow-lg"
 					href="https://instagram.com/nippiofficial"
 					target="_blank">
 					<svg
@@ -71,7 +73,7 @@
 			</li>
 			<li>
 				<a
-					class="hover:bg-purple focus-visible:bg-purple focus:outline-none focus-visible:outline-purple focus-visible:text-black hover:text-black bg-black text-md text-purple transition-colors h-full rounded flex items-center justify-center gap-8 px-8 py-4 shadow-lg"
+					class="hover:bg-purple focus-visible:bg-purple focus:outline-none focus-visible:outline-purple focus-visible:text-black hover:text-black bg-black text-purple transition-colors h-full rounded flex items-center justify-center gap-8 px-8 py-4 shadow-lg"
 					href="https://linkedin.com/in/niklasnoldin"
 					target="_blank">
 					<svg
@@ -88,7 +90,7 @@
 			</li>
 			<li>
 				<a
-					class="hover:bg-green focus-visible:bg-green focus:outline-none focus-visible:outline-purple focus-visible:text-black hover:text-black bg-black text-md text-green transition-colors h-full rounded flex items-center justify-center gap-8 px-8 py-4 shadow-lg"
+					class="hover:bg-green focus-visible:bg-green focus:outline-none focus-visible:outline-purple focus-visible:text-black hover:text-black bg-black text-green transition-colors h-full rounded flex items-center justify-center gap-8 px-8 py-4 shadow-lg"
 					href="mailto:info@niklasnold.in">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"

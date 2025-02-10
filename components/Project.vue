@@ -4,12 +4,12 @@
 			v-if="project.video || project.image"
 			:to="project.url || project._path"
 			:target="project.url ? '_blank' : '_self'"
-			class="group relative bg-[#808080] focus-visible:outline-purple focus:outline-none rounded transition-opacity">
+			class="group w-full relative bg-[#808080] focus-visible:outline-purple focus:outline-none rounded transition-opacity">
 			<div
-				class="inset-0 absolute rounded pointer-events-none opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity bg-gradient-to-br from-purple to-red"></div>
+				class="mix-blend-overlay inset-0 absolute rounded pointer-events-none opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity bg-gradient-to-br from-purple to-red"></div>
 			<video
 				v-if="project.video"
-				class="rounded w-full h-auto quiet mix-blend-overlay"
+				class="rounded w-full h-auto quiet"
 				autoplay
 				muted
 				loop
@@ -30,7 +30,7 @@
 				loading="lazy"
 				:src="project.image.src"
 				:alt="project.image.alt"
-				class="rounded overflow-hidden bg-current mix-blend-overlay"
+				class="rounded overflow-hidden bg-current"
 				:img-attrs="{
 					class: 'rounded bg-current w-full',
 				}" />

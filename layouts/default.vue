@@ -31,7 +31,7 @@
 		background-attachment: scroll, fixed, fixed, fixed;
 	}
 	.grid-layout {
-		@apply grid  grid-cols-1 gap-4 p-4;
+		@apply grid grid-cols-1 gap-4 p-4;
 	}
 
 	@screen sm {
