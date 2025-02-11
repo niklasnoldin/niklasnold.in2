@@ -116,8 +116,9 @@
 		<p class="text-md uppercase font-sans leading-none">
 			<span
 				v-for="(char, idx) in cvString"
+				class="cv-character"
 				:style="{
-					fontWeight: convertIndexToFontWeight(idx),
+					animationDelay: `${-idx * 100}ms`,
 				}"
 				>{{ char }}</span
 			>
@@ -145,7 +146,6 @@
 			<Map />
 		</ClientOnly>
 	</div>
-
 	<Project v-for="project in rest" :key="project._id" :project="project" />
 	<div
 		key="imprint"
@@ -193,16 +193,6 @@
 	);
 
 	const cvString = "curriculum vitae";
-
-	const time = useTimestamp();
-
-	function convertIndexToFontWeight(idx) {
-		const speed = 0.001;
-		const value =
-			(idx / cvString.length) * 2 * Math.PI + time.value / (1 / speed);
-		const normalizedSine = (Math.sin(value) + 1) / 2;
-		return 100 + normalizedSine * 900;
-	}
 </script>
 
 <style>
@@ -349,7 +339,7 @@
 		animation: trippy-keyframes 2s infinite linear;
 
 		svg {
-			transition: all 1s ease-in-out;
+			transition: opacity 1s ease-in-out, filter 1s ease-in-out;
 		}
 		&:focus {
 			@apply outline-none outline-purple;
@@ -358,13 +348,12 @@
 		&:hover svg {
 			filter: blur(0);
 			opacity: 1;
-			mix-blend-mode: normal;
 		}
 	}
 
 	@screen md {
 		.trippy svg {
-			@apply blur-sm opacity-25 mix-blend-luminosity;
+			@apply blur-sm opacity-25;
 		}
 	}
 
@@ -375,6 +364,20 @@
 		to {
 			background-size: 100% 100%,
 				calc(100% / calc(0.75 * 0.75)) calc(100% / calc(0.75 * 0.75));
+		}
+	}
+	.cv-character {
+		animation: characterWave 5s ease-in-out infinite;
+	}
+	@keyframes characterWave {
+		0% {
+			font-weight: 100;
+		}
+		50% {
+			font-weight: 900;
+		}
+		100% {
+			font-weight: 100;
 		}
 	}
 </style>
