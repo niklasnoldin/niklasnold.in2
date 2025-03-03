@@ -155,8 +155,8 @@
 			<p class="">Copyright {{ new Date().getFullYear() }} by Niklas Noldin</p>
 			<address class="not-italic font-semibold my-4">
 				<p>Niklas Noldin</p>
-				<p>Carrer de les Carretes 6/3/2</p>
-				<p>08001 Barcelona</p>
+				<p>Carrer de Coll i Vehí 131 4<sup>o</sup>1<sup>a</sup></p>
+				<p>08026 Barcelona</p>
 			</address>
 			<p>
 				Love letters are accepted at
