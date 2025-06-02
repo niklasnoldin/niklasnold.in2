@@ -11,10 +11,10 @@
 			contenteditable
 			autocorrect="false"
 			spellcheck="false">
-			Somewhere in the abyss 🕳️ between IT 💻 and design 🎨 I try to find the
-			right approach to all projects I work on. It usually isn't purely
-			data-driven 📊 nor purely artistic 🖼️ but needs a symbiosis 🍄 of both.
-			Hit me up if that sounds good ☎️.
+			I’m a designer 💡 and creative coder ⌨️ from the Austrian Alps 🏔️. Based
+			in Barcelona, Spain 👙, I’m available for work 🚧 internationally 🌍. With
+			a background 📖 in both design 🫟 and IT 📟, I aim to merge 🧩 these fields
+			🌾 and apply my expertise 🧠 creatively.
 		</p>
 	</div>
 	<a
