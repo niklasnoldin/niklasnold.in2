@@ -130,6 +130,23 @@
 		</p>
 	</div>
 	<Project v-for="project in latest" :key="project._id" :project="project" />
+	<div class="flex flex-col justify-center text-center px-4 py-32" key="cv">
+		<p class="text-md uppercase font-sans leading-none">
+			<span
+				v-for="(char, idx) in portfolioString"
+				class="cv-character"
+				:style="{
+					animationDelay: `${-idx * 100}ms`,
+				}"
+				>{{ char }}</span
+			>
+		</p>
+		<p class="mt-8">
+			<a href="/portfolio_noldin.pdf" target="_blank" class="button"
+				>download my portfolio</a
+			>
+		</p>
+	</div>
 	<div key="time" class="bg-white bg-opacity-10 rounded-lg p-4">
 		<div
 			class="bg-offwhite shadow-lg bg-gradient-to-b from-offwhite to-offwhite-muted p-4 md:p-4 xl:p-8 rounded border-t border-b-4 border-t-white border-b-offwhite-dark aspect-square">
@@ -186,13 +203,14 @@
 
 <script setup>
 	const { data: latest } = await useAsyncData("latestProjects", () =>
-		queryContent("projects").limit(4).find()
+		queryContent("projects").limit(3).find()
 	);
 	const { data: rest } = await useAsyncData("rest", () =>
-		queryContent("projects").skip(4).find()
+		queryContent("projects").skip(3).find()
 	);
 
 	const cvString = "curriculum vitae";
+	const portfolioString = "portfolio";
 </script>
 
 <style>
